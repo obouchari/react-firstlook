@@ -1,42 +1,78 @@
+@import 'scss/_normalize.scss';
 @import 'scss/_variables.scss';
 
-html, body {
-    height: 100%;
-    overflow: hidden;
-}
-
 body {
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
-#sidebar {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    width: 200px;
-    background-color: green;
-    /* visibility: hidden; */
+* {
+    box-sizing: border-box;
 }
 
-#main {
-    margin-left: 200px;
-    background-color: #2a7;
-    // min-height: 100%;
+.app {
+    display: flex;
+    height: 100vh;
+    align-items: stretch;
 }
 
-#content {
-    height: 100%;
-    overflow-y: scroll;
+.sidebar,
+.main {
+    display: flex;
+    flex-direction: column;
 }
 
-#navbar {
-    // position: fixed;
-    // top: 0px;
-    // left: 200px;
-    // right: 0px;
+.sidebar {
+    width: 300px;
+}
+
+.main {
+    flex-grow: 1;
+}
+
+.header {
+    background-color: #27a;
     height: 50px;
-    background-color: #e43;
+    padding: 7px 14px;
 }
 
+.content,
+.nav {
+    background-color: #772;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.nav {
+    width: 300px;
+    background-color: #d37;
+}
+
+.container {
+    padding: 2rem;
+}
+
+.grid-container {
+    column-count: 5;
+    column-gap: 2rem;
+    column-width: 250px;
+}
+
+.grid-item {
+    margin-bottom: 2rem;
+}
+
+.grid-item a {
+    display: block;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+.selected img {
+    border: 5px solid #1366a1;
+}
