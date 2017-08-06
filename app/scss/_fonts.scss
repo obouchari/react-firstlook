@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Roboto Condensed';
+    font-style: normal;
+    font-weight: 400;
+    src: local('☺'),
+        url(assets/fonts/Roboto+Condensed_400_normal.woff) format('woff'),
+        /* http://fonts.gstatic.com/s/robotocondensed/v14/Zd2E9abXLFGSr9G3YK2MsFzqCfRpIA3W6ypxnPISCPA.woff */
+        url(assets/fonts/Roboto+Condensed_400_normal.ttf) format('truetype'),
+        /* http://fonts.gstatic.com/s/robotocondensed/v14/Zd2E9abXLFGSr9G3YK2MsMEHkXu385rSv8spHqOuvSI.ttf */
+        url(assets/fonts/Roboto+Condensed_400_normal.svg#Roboto+Condensed_400_normal) format('svg');
+        /* http://fonts.gstatic.com/l/font?kit=Zd2E9abXLFGSr9G3YK2MsM9XqQMESZbwKrSTBefVM6U&skey=9986ecffddb755ab&v=v14#RobotoCondensed */
+}
