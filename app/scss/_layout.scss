@@ -1,0 +1,44 @@
+.app {
+    display: flex;
+    height: 100vh;
+    align-items: stretch;
+}
+
+.sidebar,
+.main {
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar {
+    width: 300px;
+    background-color: $sidebar-bg;
+}
+
+.main {
+    flex-grow: 1;
+    background-color: $main-bg;
+}
+
+.header {
+    height: 50px;
+    padding: 7px 14px;
+}
+
+.main>.header {
+    background-color: $main-header-bg;
+}
+
+.content,
+.nav {
+    height: 100%;
+    overflow-y: auto;
+}
+
+.nav {
+    width: 300px;
+}
+
+.container {
+    padding: 2rem;
+}
