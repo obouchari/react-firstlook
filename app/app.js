@@ -1,15 +1,39 @@
 let React = require('react');
 let ReactDOM = require('react-dom');
+let { array } = require('prop-types');
 
 require('./_styles.scss');
 
-// let img = require('./assets/images/img-1.jpg');
+class Images extends React.Component {
+    render() {
+        return (
+            <ul>
+                {this.props.sources.map(function(src) {
+                    return <li key={src.toString()}><img src={src} /></li>;
+                })}
+            </ul>
+        )
+    }
+}
+
+Images.propTypes = {
+    sources: array.isRequired
+}
 
 class App extends React.Component {
     render() {
+
+        let images = [];
+        let i = 0;
+        while (i < 34) {
+            images.push(require('./assets/images/img-' + ++i + '.jpg'));
+        }
+
         return (
-            <h1 >Hello world! this is {this.props.name}
-            </h1>
+            <div>
+                <h1 >Hello world! this is</h1>
+                <Images sources={images} />
+            </div>
         )
     }
 }
