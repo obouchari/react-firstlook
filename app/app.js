@@ -14,4 +14,4 @@ class App extends React.Component {
     }
 }
 
-ReactDOM.render(<App name="Omar Bouchari"/>, document.getElementById('myapp'));
+ReactDOM.render(<App />, document.getElementById('myapp'));
