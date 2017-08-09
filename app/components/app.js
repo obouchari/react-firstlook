@@ -3,27 +3,24 @@ let Gallery = require('./gallery');
 let Sidebar = require('./sidebar');
 let Toolbar = require('./toolbar');
 
-class App extends React.Component {
-    render() {
+function App() {
+    let images = [];
+    let i = 0;
+    while (i < 34) {
+        images.push(require('../assets/images/img-' + ++i + '.jpg'));
+    }
 
-        let images = [];
-        let i = 0;
-        while (i < 34) {
-            images.push(require('../assets/images/img-' + ++i + '.jpg'));
-        }
-
-        return (
-            <div className="window">
-                <Sidebar />
-                <div className="main">
-                    <Toolbar />
-                    <div className="content">
-                        <Gallery sources={images} />
-                    </div>
+    return (
+        <div className="window">
+            <Sidebar />
+            <div className="main">
+                <Toolbar />
+                <div className="content">
+                    <Gallery sources={images} />
                 </div>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 module.exports = App;
