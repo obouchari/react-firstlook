@@ -2,7 +2,6 @@ let React = require('react');
 let PropTypes = require('prop-types');
 let _ = require('lodash');
 
-let api = require('../../utils/api');
 
 function NavUI(props) {
     return (
@@ -30,8 +29,7 @@ class Navigation extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            selectedEntry: 'All',
-            photos: null
+            selectedEntry: 'All'
         };
 
         this.updateSelected = this.updateSelected.bind(this);
@@ -42,8 +40,9 @@ class Navigation extends React.Component {
     }
 
     updateSelected(entry) {
-        this.setState(() => ({selectedEntry: entry, photos: null}));
-        api.fetchRequestedPhotos(entry).then((photos) => {console.log(photos)});
+        this.setState(() => ({
+            selectedEntry: entry
+        }));
     }
 
     collections() {
